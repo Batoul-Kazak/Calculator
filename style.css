@@ -1,0 +1,127 @@
+body {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    padding: 3rem;
+    /* background-color: lightcoral; */
+    background-image: url(./Images/background.png);
+    background-position: center;
+    background-size: cover;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    place-items: center;
+    gap: 1rem;
+}
+
+#screen-container {
+    background-color: #222;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: right;
+    padding: 2rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    box-shadow: 5px 5px 0 #222;
+    height: 4rem;
+
+    position: relative;
+}
+
+#additional-operations {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 5px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background-color: aqua;
+    cursor: pointer;
+}
+
+#buttons-container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    /* grid-template-rows: minmax(120px, auto) repeat(5, 1fr); */
+    place-content: center;
+    place-items: center;
+    gap: 5px;
+
+    padding: 1rem;
+    /* border-radius: 1rem; */
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 5px 5px 0 #222;
+}
+
+#buttons-container button {
+    background-color: #222;
+    color: white;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px black;
+}
+
+#buttons-container button {
+    cursor: pointer;
+}
+
+#buttons-container button:not(.span-two){
+    font-weight: bold;
+    padding: 1rem;
+    width: 4rem;
+    aspect-ratio: 1;
+    outline: none;
+}
+
+#buttons-container button:not(.small-font) {
+    font-size: 1.2rem;
+}
+
+.small-font {
+    font-size: 1rem;
+}
+
+.span-two {
+    grid-column: span 2;
+    width: 8rem;
+    aspect-ratio: 2;
+}
+
+#advanced-operations-container {
+    background-color: #222;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-content: center;
+    place-items: center;
+    gap: 5px;
+    padding: 2rem;
+}
+
+#advanced-operations-container button{
+    background-color: white;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    width: 4rem;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
